@@ -1716,7 +1716,7 @@ export default class driveSyncPlugin extends Plugin {
 							e instanceof TFile &&
 							!this.cloudFiles.includes(e.path)
 						) {
-							if (e.extension != "md") {
+							if (e.extension == "md") {
 								await this.writeToVerboseLogFile(
 									"LOG: created attachment while offline"
 								);
